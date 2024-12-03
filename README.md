@@ -15,3 +15,7 @@ This is a monorepo including several script for Riliane
 ### Information Extractor
 
 The information extractor script is designed to parse information from tooltips and send that information to the console in a specific format.
+
+### Species Search
+
+The species search script is designed to extract like the information extractor, but filters the output based on the designated search criteria.
