@@ -1,0 +1,14 @@
+{
+  "name": "pokemon-scripts",
+  "workspaces": [
+    "./packages/info-extractor",
+    "./packages/species-search"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.7.2"
+  }
+}
