@@ -2,6 +2,12 @@
 
 This is a monorepo including several script for Riliane
 
+## Prerequisites
+
+- [NodeJS](https://nodejs.org/en/download/package-manager)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/downloads/win)
+
 ## Install
 
 `npm install`
