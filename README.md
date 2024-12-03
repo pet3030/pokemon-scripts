@@ -8,7 +8,7 @@ This is a monorepo including several script for Riliane
 
 ## Building
 
-`npm run build` will run the build on all workspaces, output is placed into a dist folder in each workspace, which can then be uploaded to Tampermonkey
+`npm run build` will run the build on all workspaces, output is placed into a `dist` folder in each workspace, which can then be uploaded to Tampermonkey
 
 ## Scripts
 
