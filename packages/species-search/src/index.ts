@@ -1,4 +1,6 @@
+import { isNotInParty } from "../../shared/party";
 import { getPokemonInfo } from "../../shared/pokemonInfo";
+import { QUERY_SELECTORS } from "../../shared/selectors";
 import { Gender, PokemonInfoSearch } from "../../shared/types";
 
 // List of Pokémon species to search for, with optional gender and forme specification
@@ -7,15 +9,14 @@ const SEARCH: PokemonInfoSearch[] = [
   { species: "Meowth", gender: Gender.Female },
 ];
 
-const TOOLTIP_QUERY_SELECTOR = ".fieldmontip";
-
 const start = () => {
   console.clear();
   const tooltips = document.querySelectorAll<HTMLElement>(
-    TOOLTIP_QUERY_SELECTOR
+    QUERY_SELECTORS.tooltip
   );
 
   const pokemonInfo = Array.from(tooltips)
+    .filter(isNotInParty)
     .map(getPokemonInfo)
     .filter((x) => x.hasInfo && x.isSpeciesOrEvolutionInSearch(SEARCH));
 

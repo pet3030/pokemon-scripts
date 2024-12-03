@@ -1,14 +1,15 @@
+import { isNotInParty } from "../../shared/party";
 import { getPokemonInfo } from "../../shared/pokemonInfo";
-
-const TOOLTIP_QUERY_SELECTOR = ".fieldmontip";
+import { QUERY_SELECTORS } from "../../shared/selectors";
 
 const start = () => {
   console.clear();
   const tooltips = document.querySelectorAll<HTMLElement>(
-    TOOLTIP_QUERY_SELECTOR
+    QUERY_SELECTORS.tooltip
   );
 
   const pokemonInfo = Array.from(tooltips)
+    .filter(isNotInParty)
     .map(getPokemonInfo)
     .filter((x) => x.hasInfo);
 
