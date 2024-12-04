@@ -10,7 +10,11 @@ This is a monorepo including several script for Riliane
 
 ## Install
 
-`npm install`
+```cmd
+git clone https://github.com/pet3030/pokemon-scripts.git
+cd pokemon-scripts
+npm install
+```
 
 ## Building
 
