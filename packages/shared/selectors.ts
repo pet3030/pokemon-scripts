@@ -1,4 +1,3 @@
 export const QUERY_SELECTORS = {
-  tooltip: ".fieldmontip",
-  party: "div.field_party",
+  tooltip: "#field_field > div.field > div.tooltip_content > div.fieldmontip",
 };

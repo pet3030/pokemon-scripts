@@ -1,4 +1,3 @@
-import { isNotInParty } from "../../shared/party";
 import { getPokemonInfo } from "../../shared/pokemonInfo";
 import { QUERY_SELECTORS } from "../../shared/selectors";
 
@@ -9,7 +8,6 @@ const start = () => {
   );
 
   const pokemonInfo = Array.from(tooltips)
-    .filter(isNotInParty)
     .map(getPokemonInfo)
     .filter((x) => x.hasInfo);
 
