@@ -1,4 +1,3 @@
-import { isNotInParty } from "../../shared/party";
 import { getPokemonInfo } from "../../shared/pokemonInfo";
 import { QUERY_SELECTORS } from "../../shared/selectors";
 import { Gender, PokemonInfoSearch } from "../../shared/types";
@@ -16,7 +15,6 @@ const start = () => {
   );
 
   const pokemonInfo = Array.from(tooltips)
-    .filter(isNotInParty)
     .map(getPokemonInfo)
     .filter((x) => x.hasInfo && x.isSpeciesOrEvolutionInSearch(SEARCH));
 
